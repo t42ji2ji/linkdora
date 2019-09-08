@@ -1,28 +1,90 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  #app
+    .Links
+      .head
+        .headimage
+        .headTitle
+          h1 Hi 我是哆啦
+          h4 這是我的小天地
+      <hr style="width: 70%; margin-bottom: 30px">
+      DoraLink(v-for ="data in links" :LinkTitle="data.title", :Linkurl="data.url")
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import DoraLink from './components/DoraLink'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    DoraLink
+  },
+  data() {
+    return {
+      links: [
+        {title: "最新文章", url: "https://medium.com/%E5%93%86%E5%95%A6%E5%AF%A6%E9%A9%97%E5%AE%A4/%E8%87%AA%E6%88%91%E6%98%AF%E5%8D%A1%E5%9C%A8%E6%B4%9E%E5%8F%A3%E7%9A%84-%E4%BA%BA%E7%94%9F%E8%A8%88%E7%95%AB-1-bd0a92190add"},
+        {
+          title: "Facebook",
+          url: "https://www.facebook.com/doraralab/"
+        }
+      ]
+    }
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap')
+
+  @mixin size($w,$h:$w)
+    width: $w
+    height: $h
+    
+
+  html, body
+    width: 100%
+    height: 100%
+    margin: 0
+    background-color: #222938
+    font-family: 'Noto Sans TC', sans-
+    hr
+      opacity: .8
+
+  #app
+    +size(100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    h1
+      margin: 0
+      color: white
+    h4
+      margin: 0
+
+  .Links
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+  .head
+    padding: 15px 12px
+    display: flex
+    align-items: center
+    .headimage
+      +size(80px)
+      background-color: #d51f1f
+      margin: 5px
+      border-radius: 50%
+      background-image: url('./assets/pig.png')
+      background-position: center center
+      background-repeat: no-repeat
+      background-size: cover
+
+    .headTitle
+      text-align: left
+      color: white
+      margin: 5px
+      h1
+        font-size: 1.5rem
+      h4
+        color: rgba(white, .3)
 </style>
