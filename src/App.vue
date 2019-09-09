@@ -2,7 +2,7 @@
   #app
     .Links
       .head
-        .headimage(@click="")
+        .headimage(@click="add")
         .headTitle
           h1 Hi 我是哆啦
           h4 這是我的小天地
@@ -54,6 +54,7 @@ export default {
         title: "Facebook",
         url: ""
       });
+      this.$ga.event('category', 'action', 'label', 123)
     },
     track() {
       page('/')
