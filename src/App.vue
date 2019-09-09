@@ -32,7 +32,15 @@ export default {
         {
           title: "Facebook",
           url: "https://www.facebook.com/doraralab/"
-        }
+        },
+        {
+          title: "",
+          url: ""
+        },
+        {
+          title: "我的貼圖",
+          url: "https://store.line.me/stickershop/product/7662172/zh-Hant"
+        },
       ],
       links: [],
       show: true
@@ -54,7 +62,7 @@ export default {
         title: "Facebook",
         url: ""
       });
-      this.$ga.event('category', 'action', 'label', 123)
+      this.$ga.event('HeadImage', 'click', 'headImageClick', 1)
     },
     track() {
       page('/')
@@ -104,7 +112,7 @@ export default {
     align-items: center
     flex-direction: column
     transition: .5s
-    margin-top: 25vh
+    margin-top: 20vh
   .head
     padding: 15px 12px
     display: flex

@@ -1,5 +1,5 @@
 <template lang="pug">
-  a.Link(:href="Linkurl" target="_blank") {{LinkTitle}}
+  a.Link(:href="Linkurl" target="_blank" @click="click(LinkTitle)" :style="show") {{LinkTitle}}
 </template>
 
 <script>
@@ -13,6 +13,24 @@ export default {
     return {
       title: "asd",
     };
+  },
+  computed:{
+    show: function() {
+      if(this.LinkTitle == ""){
+        return {
+          opacity: '0',
+          margin: '0',
+          'pointer-events': 'none'
+        }
+      }
+      return ""
+    }
+  },
+  methods: {
+    click: function(title) {
+      console.log(title);
+      this.$ga.event('Link', 'click', title, 1)
+    }
   }
 };
 </script>
@@ -21,6 +39,7 @@ export default {
 
 
 .Link
+  min-height: 1.3rem
   max-width: 60%
   padding: 7px 22px
   background-color: white
@@ -33,6 +52,8 @@ export default {
   text-decoration: none
   color: #573b95
   margin-bottom: 15px
+  flex: 1
+  cursor: pointer
   
 
 
