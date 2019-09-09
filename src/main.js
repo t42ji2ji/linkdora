@@ -10,5 +10,8 @@ new Vue({
 }).$mount('#app')
 
 Vue.use(VueAnalytics, {
-  id: 'UA-126651542-4'
+  id: 'UA-126651542-4',
+  autoTracking: {
+    screenview: true
+  }
 })
