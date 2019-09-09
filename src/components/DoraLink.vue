@@ -7,11 +7,11 @@ export default {
   name: "app",
   components: {},
   props: {
-    Linkurl: String, LinkTitle:String
+    Linkurl: String, LinkTitle:String,
   },
   data: function() {
     return {
-      title: "asd"
+      title: "asd",
     };
   }
 };
@@ -34,6 +34,7 @@ export default {
   color: #573b95
   margin-bottom: 15px
   
+
 
 
 @media screen and (max-device-width: 480px)
