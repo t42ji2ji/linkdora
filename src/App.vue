@@ -45,6 +45,7 @@ export default {
         }, index*500)
       }(index))
     });
+    this.track()
   },
   methods: {
     add: function() {
