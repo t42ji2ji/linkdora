@@ -52,6 +52,9 @@ export default {
         title: "Facebook",
         url: ""
       });
+    },
+    track () {
+      this.$ga.page('/')
     }
   }
 };
