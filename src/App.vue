@@ -14,6 +14,8 @@
 <script>
 import DoraLink from "./components/DoraLink";
 import { setTimeout } from "timers";
+import { page } from 'vue-analytics';
+
 export default {
   name: "app",
   components: {
@@ -53,6 +55,9 @@ export default {
         url: ""
       });
     },
+    track() {
+      page('/')
+    }
   }
 };
 </script>
@@ -98,14 +103,14 @@ export default {
     align-items: center
     flex-direction: column
     transition: .5s
-    margin-top: 30%
+    margin-top: 25vh
   .head
     padding: 15px 12px
     display: flex
     align-items: center
     .headimage
       +size(80px)
-      background-color: #d51f1f
+      background-color: #f27474
       margin: 5px
       border-radius: 50%
       background-image: url('./assets/pig.png')
