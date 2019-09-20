@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     click: function(title) {
-      console.log(title);
+      console.log(title)
       this.$ga.event('Link', 'click', title, 1)
     }
   }
@@ -37,20 +37,24 @@ export default {
 
 <style lang="sass">
 
+  $backgroundcolor: #1a2849
+  $buttoncolor: white
+  $textcolor: #b063c5
+  $secondcolor:  #ffaac3
 
 .Link
-  min-height: 1.3rem
+  min-height: 1.2rem
   max-width: 60%
   padding: 7px 22px
-  background-color: white
+  background-color: $buttoncolor
   text-align: center
   width: 100%
   border-radius: 7px
-  font-size: 1.3rem
+  font-size: 1.2rem
   font-weight: bold
   cursor: pointer
   text-decoration: none
-  color: #573b95
+  color: #backgroundcolor
   margin-bottom: 15px
   flex: 1
   cursor: pointer
@@ -60,6 +64,6 @@ export default {
 
 @media screen and (max-device-width: 480px)
   .Link
-    max-width: 60%
+    max-width: 70%
 
 </style>

@@ -79,11 +79,16 @@ export default {
     height: $h
     
 
+  $backgroundcolor: #1a2849
+  $buttoncolor: #505bda
+  $textcolor: white
+  $secondcolor:  #ffaac3
+
   html, body
     width: 100%
     height: 100%
     margin: 0
-    background-color: #222938
+    background-color: $backgroundcolor
     font-family: 'Noto Sans TC', sans-
     hr
       opacity: .8
@@ -102,7 +107,7 @@ export default {
     justify-content: center
     h1
       margin: 0
-      color: white
+      color: $textcolor
     h4
       margin: 0
 
@@ -112,7 +117,7 @@ export default {
     align-items: center
     flex-direction: column
     transition: .5s
-    margin-top: 20vh
+    margin-top: 10vh
   .head
     padding: 15px 12px
     display: flex
@@ -129,12 +134,12 @@ export default {
 
     .headTitle
       text-align: left
-      color: white
+      color: $textcolor
       margin: 5px
       h1
         font-size: 1.5rem
       h4
-        color: rgba(white, .3)
+        color: $secondcolor
 
 
 .list-item
